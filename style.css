@@ -1,0 +1,82 @@
+/* === Global Background === */
+body {
+  body { border: 5px solid red !important; }
+  font-family: Arial, sans-serif;
+  background: #f4cddd; /* soft pink */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* === Card / Container === */
+.container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  animation: fadeIn 0.4s ease;
+}
+
+/* === Buttons === */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #e85490;
+  border: none;
+  color: white;
+  font-size: 17px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d44882;
+}
+
+/* === Gift Options === */
+.gift-option {
+  border: 2px solid #e7dfe3;
+  padding: 14px;
+  border-radius: 14px;
+  text-align: left;
+  margin: 12px 0;
+  cursor: pointer;
+  background: #faf7fa;
+  transition: 0.2s;
+}
+
+.gift-option:hover {
+  background: #f2d5e0;
+}
+
+.gift-option.selected {
+  border-color: #e85490;
+  background: #fbe5ef;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+  display: inline-block;
+  color: #e85490;
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.25); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
